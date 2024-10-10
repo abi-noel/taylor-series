@@ -8,7 +8,7 @@
 
 .whole-page {
   background-color: rgb(41, 41, 41);
-  min-width: 700px;
+  /* min-width: 800px; */
 }
 
 .main-container {
@@ -35,17 +35,27 @@ td {
 
   font-weight: 800;
   color: rgba(255, 255, 255, 0.675);
+
+  @media (max-width: 700px) {
+    font-size: 12px;
+  }
 }
 th {
   font-weight: 9000;
   font-size: 20px;
   color: white;
   padding-bottom: 20px;
+
+  @media (max-width: 700px) {
+    font-size: 15px;
+  }
 }
+
 .table-container {
   padding: 20px;
 
-  width: 75%;
+  width: 60vw;
+  min-width: 500px;
   background: linear-gradient(
     340deg,
     rgb(9, 93, 195),
@@ -54,7 +64,14 @@ th {
   );
   border-radius: 20px;
 
+  min-width: 600px;
+
   margin: 5vh 0 20vh 0;
+
+  @media (max-width: 700px) {
+    width: 80vw;
+    min-width: 450px;
+  }
 }
 
 tr:last-of-type td {
@@ -62,6 +79,10 @@ tr:last-of-type td {
   font-size: 20px;
   color: white;
   padding: 50px 0 50px 0;
+
+  @media (max-width: 700px) {
+    font-size: 15px;
+  }
 }
 
 .start-button {
@@ -84,14 +105,22 @@ tr:last-of-type td {
 .start-button:hover {
   background-color: rgb(33, 33, 33);
   border: 2px solid rgb(51, 51, 51);
+  cursor: pointer;
 }
 
 .title {
   color: white;
+  font-size: 2.5vw;
 
   opacity: 0;
   transform: translateY(-100%); /* Slide in from the top */
   animation: slideIn 2s forwards;
+
+  @media (max-width: 1050px) {
+    text-align: center;
+    font-size: 26px;
+    width: 70vw;
+  }
 }
 
 @keyframes slideIn {
