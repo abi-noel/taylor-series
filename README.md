@@ -7,6 +7,9 @@ and
 $$\arctan(1) = \frac{\pi}{4}$$
 
 At each estimate, the error of the estimate is also displayed.
-The logic of this calculation is defined in the script.js file, while the website is built in HTML and CSS. 
+The logic of this calculation is defined in the script.js file and the website is built in HTML and CSS. 
+
 Though the iterations would normally occur in a fraction of a second, a one second interval in the script.js file ensures that
-each estimate and its error is displayed to the user iteratively rather than suddenly.
+each estimate and its error is displayed to the user iteratively rather than suddenly. As such, each row of the table displayed 
+on the website is dynamically generated in JavaScript at each pass of the interval. This creates a more asthetically pleasing UI than if the table 
+had appeared instantaneously upon calculation.
