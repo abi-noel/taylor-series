@@ -13,3 +13,9 @@ Though the iterations would normally occur in a fraction of a second, a one seco
 each estimate and its error is displayed to the user iteratively rather than suddenly. As such, each row of the table displayed 
 on the website is dynamically generated in JavaScript at each pass of the interval. This creates a more asthetically pleasing UI than if the table 
 had appeared instantaneously upon calculation.
+
+## Running the Program
+
+After serving the website locally, press the "Calculate Pi" button to begin the iterations. 
+
+The page must be refreshed in order to rerun calculation.
