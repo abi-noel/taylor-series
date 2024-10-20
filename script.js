@@ -7,6 +7,9 @@ function estimatePi(button) {
   // Initialize iteration counter
   let i = 0;
 
+  // Hide button so that multiple intervals cannot be started
+  button.style.display = "none";
+
   // Use setInterval to add a row every second (1000 ms)
   let interval = setInterval(() => {
     if (i >= iterations) {
@@ -22,7 +25,7 @@ function estimatePi(button) {
     // Create a new table row (tr)
     let newRow = document.createElement("tr");
 
-    // Create two table data cells (td)
+    // Create three table data cells (td)
     let cell1 = document.createElement("td");
     let cell2 = document.createElement("td");
     let cell3 = document.createElement("td");
@@ -42,5 +45,4 @@ function estimatePi(button) {
 
     i++; // Increment the iteration counter
   }, 1000); // 1000 milliseconds = 1 second
-  button.style.display = "none";
 }

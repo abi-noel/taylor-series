@@ -24,7 +24,6 @@ table {
   width: 100%;
   border-collapse: collapse; /* Ensures borders are not doubled */
   table-layout: fixed;
-  border-radius: 5px;
 }
 
 td {
@@ -35,6 +34,10 @@ td {
   font-weight: 800;
   color: rgba(255, 255, 255, 0.675);
 
+  /*
+  When the screen is squeezed below 700px, these properties are 
+  triggered.
+  */
   @media (max-width: 700px) {
     font-size: 12px;
   }
@@ -73,6 +76,9 @@ th {
   }
 }
 
+/*
+Make the last estimate stick out more
+*/
 tr:last-of-type td {
   font-weight: 9000;
   font-size: 20px;
@@ -97,7 +103,6 @@ tr:last-of-type td {
   border: none;
 
   opacity: 0;
-  transform: translateY(-100%); /* Slide in from the top */
   animation: slideIn 1s forwards;
 }
 
@@ -112,7 +117,6 @@ tr:last-of-type td {
   font-size: 2.5vw;
 
   opacity: 0;
-  transform: translateY(-100%); /* Slide in from the top */
   animation: slideIn 2s forwards;
 
   @media (max-width: 1050px) {
@@ -122,12 +126,15 @@ tr:last-of-type td {
   }
 }
 
+/*
+Animation to make element slide down and fade in
+*/
 @keyframes slideIn {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(-100%);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
